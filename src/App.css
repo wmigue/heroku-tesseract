@@ -24,3 +24,17 @@
   border-radius: 5px;
   text-align: center;
 }
+
+button, input{
+margin-bottom:  15px;
+}
+
+.convertir{
+  margin-top: 20px;
+  background-color: antiquewhite;
+  font-size: 25px;
+}
+
+.convertirnone{
+  display: none;
+}

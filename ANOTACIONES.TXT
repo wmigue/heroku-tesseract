@@ -1,0 +1,16 @@
+//LOGIN EN heroku.
+heroku login
+
+//ver rutas de git en vinculados.
+git remote -v
+
+//hacer los git init, git add . , commits, relacionar carpeta con proyecto github, etc.
+
+//añadir vinculo con el proyecto en heroku.
+heroku git:remote -a shrouded-anchorage-72370
+
+//subir a heroku.
+git push heroku master  
+
+//abrir el proyecto en la url asignada por heroku.
+heroku open
