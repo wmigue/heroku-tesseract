@@ -47,7 +47,7 @@ function App() {
                 "Convirtiendo: " + progreso + "%"
           }
         />
-        <h3>{imagePath ? "Imagen seleccionada:" : "pokerstars a texto 😁"}</h3>
+        <h3>{imagePath ? "Imagen seleccionada:" : " 😁"}</h3>
         <img src={imagePath} className="App-image" />
         <h3>{progreso >= 100 ? "Texto extraido" : ""} </h3>
         <div className="text-box">
