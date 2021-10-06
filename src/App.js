@@ -9,13 +9,14 @@ function App() {
   const [text, setText] = useState("");
   const [progreso, setProgreso] = useState(0);
 
+  //seteo de imagen
   const handleChange = (event) => {
     setImagePath(URL.createObjectURL(event.target.files[0]));
   }
 
 
+  //tarea de reconocimiento
   const handleClick = () => {
-
     Tesseract.recognize(
       imagePath, 'eng',
 
@@ -36,6 +37,8 @@ function App() {
       })
   }
 
+
+  
   return (
     <div className="App">
       <main className="App-main">
@@ -47,7 +50,7 @@ function App() {
                 "Convirtiendo: " + progreso + "%"
           }
         />
-        <h3>{imagePath ? "Imagen seleccionada:" : "pokerstars a texto 😁"}</h3>
+        <h3>{imagePath ? "Imagen seleccionada:" : "Imagen a Texto 😁"}</h3>
         <img src={imagePath} className="App-image" />
         <h3>{progreso >= 100 ? "Texto extraido" : ""} </h3>
         <div className="text-box">
@@ -57,7 +60,7 @@ function App() {
           <Form.Label>Seleccionar una imagen: &nbsp; </Form.Label>
           <Form.Control id="file" type="file" onChange={handleChange} />
         </Form.Group>
-        <button className={imagePath?"convertir": "convertirnone"} onClick={handleClick} style={{ height: 50 }}> CONVERTIR A TEXTO</button>
+        <button className={imagePath ? "convertir" : "convertirnone"} onClick={handleClick} style={{ height: 50 }}> CONVERTIR A TEXTO</button>
       </main>
     </div>
   );
