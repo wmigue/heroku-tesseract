@@ -13,6 +13,8 @@ heroku git:remote -a shrouded-anchorage-72370
 
 //subir a heroku.
 git push heroku master  
+sino: 
+git push heroku HEAD:master
 
 //abrir el proyecto en la url asignada por heroku.
 heroku open
